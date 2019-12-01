@@ -6,7 +6,7 @@ class DepsManager
      static async getDeps(pkgName,version)
      {          
         var node = cache.get(pkgName+'-v.-'+version);
-        
+        console.log('log test depsManager');
         if(!node)
           {            
             var firstLevelDeps = await HttpClient.get(pkgName,version); 
